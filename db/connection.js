@@ -1,0 +1,1 @@
+module.exports = require('mysql2').createConnection('mysql://root:CARTel1177!@localhost:3306/employeeManager_db')
