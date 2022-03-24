@@ -6,6 +6,8 @@ const db = mysql.createConnection('mysql://root:CARTel1177!@localhost:3306/emplo
 
 // use js files in lib folder
 const department = require('./lib/department')
+const role = require('./lib/role')
+const employee = require('./lib/employee')
 
 // user asked a question and given several choices
 const question = () => {
@@ -21,16 +23,16 @@ const question = () => {
     // using switch/case to add functionality to each option
     switch(init.mainMenu) {
       case 'Add Department':
-        addDepartment()
+        department()
         break
       case 'Add Role':
-        addRole()
+        role()
         break
       case 'Add Employee':
-        addEmployee()
+        employee()
         break 
       case 'View Departments':
-        viewDepartments()
+        departments()
         break
       case 'View Roles':
         viewRoles()
