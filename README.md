@@ -1,137 +1,48 @@
-# Unit 12 MySQL Homework: Employee Tracker
 
-Developers are often tasked with creating interfaces that make it easy for non-developers to view and interact with information stored in databases. Often these interfaces are known as **C**ontent **M**anagement **S**ystems. In this homework assignment, your challenge is to architect and build a solution for managing a company's employees using node, inquirer, and MySQL.
+<img src='https://img.shields.io/badge/License-Apache 2.0-yellow.svg'>
 
-## Instructions
+<h1> Employee CMS </h1>
+<h2> Description </h2>
+<p> This is an employee content management system utilizing <code>Node.js</code>, <code>Inquirer</code>, and <code>MySQL</code> that can be run on a command line to allow a user to manage their company's employees. The user has the ability to view and manage the departments, roles, and employees of their company. </p>
+<h2> Table of Contents </h2>
+<details open='open'>
+<summary>Table of Contents</summary>
+<ol>
+<li><a href='#installation'>Installation</a></li>
+<li><a href='#usage'>Usage</a></li>
+<li><a href='#contribution'>Contribution</a></li>
+<li><a href='#tests'>Tests</a></li>
+<li><a href='#questions'>Questions</a></li>
+</details>
 
-Design the following database schema containing three tables:
+## <h3 id='installation'>Installation</h3>
+<p> This system requires the a local MySQL server. Clone this repo to your local device and  run the command <code>npm i</code> to install Node packages. </p>
 
-![Database Schema](Assets/schema.png)
+## <h3 id='usage'>Usage</h3>
+<p> The user can run <code>node server.js</code> in their command line. </p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NkBa6c8O190?start=12" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p></p>
+<p>Add Department + Add Role:</p>
+<img src="./assets/images/addDeptRole.png" width='565px'>
+<p>Add Employee:</p>
+<img src="./assets/images/addEmp.png" width='565px'>
+<p>View Departments:</p>
+<img src="./assets/images/viewAllDept.png" width='565px'>
+<p>View Roles:</p>
+<img src="./assets/images/viewAllRole.png" width='565px'>
+<p>View Employees:</p>
+<img src="./assets/images/viewAllEmp.png" width='565px'>
+<p>Update Employee Roles:</p>
+<img src="./assets/images/updEmpRole.png" width='565px'>
 
-* **department**:
+## <h3 id='contribution'>Contributing</h3>
+<p> Functionalities are still being added to this application. If you would like to contribute or provide any feedback, please contact me. You can find contact information below in the <a href='#questions'>Questions</a> section. </p>
 
-  * **id** - INT PRIMARY KEY
-  * **name** - VARCHAR(30) to hold department name
+## <h3 id='testing'>Tests</h3>
+<p> There are no testing guidelines for this project. </p>
 
-* **role**:
-
-  * **id** - INT PRIMARY KEY
-  * **title** -  VARCHAR(30) to hold role title
-  * **salary** -  DECIMAL to hold role salary
-  * **department_id** -  INT to hold reference to department role belongs to
-
-* **employee**:
-
-  * **id** - INT PRIMARY KEY
-  * **first_name** - VARCHAR(30) to hold employee first name
-  * **last_name** - VARCHAR(30) to hold employee last name
-  * **role_id** - INT to hold reference to role employee has
-  * **manager_id** - INT to hold reference to another employee that manager of the current employee. This field may be null if the employee has no manager
-  
-Build a command-line application that at a minimum allows the user to:
-
-  * Add departments, roles, employees
-
-  * View departments, roles, employees
-
-  * Update employee roles
-
-Bonus points if you're able to:
-
-  * Update employee managers
-
-  * View employees by manager
-
-  * Delete departments, roles, and employees
-
-  * View the total utilized budget of a department -- ie the combined salaries of all employees in that department
-
-We can frame this challenge as follows:
-
-```
-As a business owner
-I want to be able to view and manage the departments, roles, and employees in my company
-So that I can organize and plan my business
-```
-
-How do you deliver this? Here are some guidelines:
-
-* Use the [MySQL](https://www.npmjs.com/package/mysql) NPM package to connect to your MySQL database and perform queries.
-
-* Use [InquirerJs](https://www.npmjs.com/package/inquirer/v/0.2.3) NPM package to interact with the user via the command-line.
-
-* Use [console.table](https://www.npmjs.com/package/console.table) to print MySQL rows to the console. There is a built-in version of `console.table`, but the NPM package formats the data a little better for our purposes.
-
-* You may wish to have a separate file containing functions for performing specific SQL queries you'll need to use. Could a constructor function or a class be helpful for organizing these?
-
-* You will need to perform a variety of SQL JOINS to complete this assignment, and it's recommended you review the week's activities if you need a refresher on this.
-
-![Employee Tracker](Assets/employee-tracker.gif)
-
-### Hints
-
-* You may wish to include a `seed.sql` file to pre-populate your database. This will make development of individual features much easier.
-
-* Focus on getting the basic functionality completed before working on more advanced features.
-
-* Review the week's activities for a refresher on MySQL.
-
-* Check out [SQL Bolt](https://sqlbolt.com/) for some extra MySQL help.
-
-## Minimum Requirements
-
-* Functional application.
-
-* GitHub repository with a unique name and a README describing the project.
-
-* The command-line application should allow users to:
-
-  * Add departments, roles, employees
-
-  * View departments, roles, employees
-
-  * Update employee roles
-
-## Bonus
-
-* The command-line application should allow users to:
-
-  * Update employee managers
-
-  * View employees by manager
-
-  * Delete departments, roles, and employees
-
-  * View the total utilized budget of a department -- ie the combined salaries of all employees in that department
-
-## Commit Early and Often
-
-One of the most important skills to master as a web developer is version control. Building the habit of committing via Git is important for two reasons:
-
-* Your commit history is a signal to employers that you are actively working on projects and learning new skills.
-
-* Your commit history allows you to revert your codebase in the event that you need to return to a previous state.
-
-Follow these guidelines for committing:
-
-* Make single-purpose commits for related changes to ensure a clean, manageable history. If you are fixing two issues, make two commits.
-
-* Write descriptive, meaningful commit messages so that you and anyone else looking at your repository can easily understand its history.
-
-* Don't commit half-done work, for the sake of your collaborators (and your future self!).
-
-* Test your application before you commit to ensure functionality at every step in the development process.
-
-We would like you to have well over 200 commits by graduation, so commit early and often!
-
-
-## Submission on BCS
-
-You are required to submit the following:
-
-* The URL of the GitHub repository
-
-* A video demonstrating the entirety of the app's functionality 
+## <h3 id='questions'>Questions</h3>
+<p>Have questions? Please feel free to reach out to me on github at <a href='https://github.com/skcruzer'target='_blank'>skcruzer</a> or by email at <a href='mailto:seankennethcruz@gmail.com'target='_blank'>seankennethcruz@gmail.com</a>.</p>
 
 - - -
-© 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+© 2022 Skcruzer, Inc. All Rights Reserved.
