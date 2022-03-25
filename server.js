@@ -71,6 +71,7 @@ const addDepartment = () => {
 // gives user ability to view departments
 const viewDepartments = () => {
   db.query('SELECT * FROM departments', (err, department) => {
+    console.log(' View All Departments')
     if (err) {
       console.log(err)
     }
@@ -161,6 +162,7 @@ const updateEmployeeRole = () => {
 // gives user ability to view roles
 const viewRoles = () => {
   db.query('SELECT * FROM roles', (err, roles) => {
+    console.log(' View All Roles')
     if (err) {
       console.log(err)
     }
@@ -243,6 +245,7 @@ const addEmployee = () => {
 // gives user ability to view employees
 const viewEmployees = () => {
   db.query('SELECT * FROM employees', (err, employees) => {
+    console.log(' View All Employees')
     if (err) {
       console.log(err)
     }
