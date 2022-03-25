@@ -79,26 +79,26 @@ const viewDepartments = () => {
   question()
 } 
 
-// gives user ability to delete a department
-const deleteDepartment = () => {
-  console.log('You are trying to delete a department!')
-  inquirer.prompt([
-    {
-      type: 'input',
-      name: 'name',
-      message: 'What is the department id you would like to delete?'
-    }
-  ])
-    .then(department => {
-      // department selected by user will be deleted
-      db.query('DELETE FROM departments WHERE ?', { id: req.params.id }, err => {
-        if (err) { console.log(err) }
-      })
-      console.log('Department deleted!')
-      // after deleting the department, asking the initial question again
-      question()
-    })
-}
+// gives user ability to delete a department; BONUS: WORK IN PROGRESS
+// const deleteDepartment = () => {
+//   console.log('You are trying to delete a department!')
+//   inquirer.prompt([
+//     {
+//       type: 'input',
+//       name: 'name',
+//       message: 'What is the department id you would like to delete?'
+//     }
+//   ])
+//     .then(department => {
+//       // department selected by user will be deleted
+//       db.query('DELETE FROM departments WHERE id = ?', { id: req.department.id }, err => {
+//         if (err) { console.log(err) }
+//       })
+//       console.log('Department deleted!')
+//       // after deleting the department, asking the initial question again
+//       question()
+//     })
+// }
 
 const addRole = () => {
   console.log('You are trying to add a role!')
