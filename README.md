@@ -20,7 +20,7 @@
 
 ## <h3 id='usage'>Usage</h3>
 <p> The user can run <code>node server.js</code> in their command line. </p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/NkBa6c8O190?start=5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+Youtube Link: <a href='https://youtu.be/NkBa6c8O190' target='_blank'>Employee CMS Walkthrough</a> 
 <p></p>
 <p>Add Department + Add Role:</p>
 <img src="./assets/images/addDeptRole.png" width='565px'>
