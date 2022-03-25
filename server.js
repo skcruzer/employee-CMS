@@ -11,7 +11,7 @@ const question = () => {
       type: 'list',
       name: 'mainMenu',
       message: 'What would you like to do? Please choose one of the following options:',
-      choices: ['Add Department', 'Add Role', 'Add Employee', 'View Departments', 'View Roles', 'View Employees', 'Delete Department', 'Update Employee Role', 'Cancel']
+      choices: ['Add Department', 'Add Role', 'Add Employee', 'View Departments', 'View Roles', 'View Employees', 'Update Employee Role', 'Cancel']
     }
   ])
   .then(init => {
