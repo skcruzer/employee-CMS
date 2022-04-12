@@ -16,7 +16,7 @@
 </details>
 
 ## <h3 id='installation'>Installation</h3>
-<p> This system requires the a local MySQL server. Clone this repo to your local device and  run the command <code>npm i</code> to install Node packages. </p>
+<p> This system requires a local MySQL server. Clone this repo to your local device and  run the command <code>npm i</code> to install Node packages. </p>
 
 ## <h3 id='usage'>Usage</h3>
 <p> The user can run <code>node server.js</code> in their command line. </p>
